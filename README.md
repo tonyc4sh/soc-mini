@@ -40,17 +40,6 @@ This is a **junior-level / SOC L1 portfolio project**.
 
 ---
 
-## 📂 Project Structure
-soc-mini/
-├── logs/
-│ └── auth.log
-├── ssh_failed_counter.py
-├── ssh_bruteforce_alert.py
-├── alerts.log
-└── README.md
-
----
-
 ## ▶️ How to Run
 
 1. Make sure Python 3 is installed
