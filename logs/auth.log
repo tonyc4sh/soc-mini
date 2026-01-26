@@ -1,0 +1,24 @@
+Jan 10 11:55:01 server sshd[1111]: Accepted Password for user1 from 192.168.1.50 port 51001 ssh2
+
+Jan 10 12:00:12 server sshd[1234]: Failed Password for invalid user admin from 192.168.1.10 port 4451 ssh2
+Jan 10 12:00:15 server sshd[1234]: Failed Password for invalid user admin from 192.168.1.10 port 4452 ssh2
+Jan 10 12:00:18 server sshd[1234]: Failed Password for invalid user admin from 192.168.1.10 port 4453 ssh2
+Jan 10 12:00:21 server sshd[1234]: Failed Password for invalid user admin from 192.168.1.10 port 4454 ssh2
+Jan 10 12:00:24 server sshd[1234]: Failed Password for invalid user admin from 192.168.1.10 port 4455 ssh2
+Jan 10 12:00:27 server sshd[1234]: Failed Password for invalid user admin from 192.168.1.10 port 4456 ssh2
+Jan 10 12:00:30 server sshd[1234]: Failed Password for invalid user admin from 192.168.1.10 port 4457 ssh2
+Jan 10 12:00:33 server sshd[1234]: Failed Password for invalid user admin from 192.168.1.10 port 4458 ssh2
+Jan 10 12:00:36 server sshd[1234]: Failed Password for invalid user admin from 192.168.1.10 port 4459 ssh2
+Jan 10 12:00:39 server sshd[1234]: Failed Password for invalid user admin from 192.168.1.10 port 4460 ssh2
+Jan 10 12:00:42 server sshd[1234]: Failed Password for invalid user admin from 192.168.1.10 port 4461 ssh2
+
+Jan 10 12:03:10 server sshd[2222]: Failed Password for user2 from 192.168.1.20 port 52001 ssh2
+Jan 10 12:03:20 server sshd[2222]: Failed Password for user2 from 192.168.1.20 port 52002 ssh2
+
+Jan 10 12:05:45 server sshd[3333]: Accepted Password for validuser from 192.168.1.30 port 53001 ssh2
+
+Jan 10 12:08:01 server sshd[4444]: Failed Password for invalid user test from 203.0.113.5 port 60001 ssh2
+Jan 10 12:08:05 server sshd[4444]: Failed Password for invalid user test from 203.0.113.5 port 60002 ssh2
+Jan 10 12:08:09 server sshd[4444]: Failed Password for invalid user test from 203.0.113.5 port 60003 ssh2
+Jan 10 12:08:13 server sshd[4444]: Failed Password for invalid user test from 203.0.113.5 port 60004 ssh2
+Jan 10 12:08:17 server sshd[4444]: Failed Password for invalid user test from 203.0.113.5 port 60005 ssh2
