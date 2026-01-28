@@ -53,9 +53,16 @@ python3 ssh_bruteforce_alert.py
 
 📄 Example Alert Output
 
-[2026-01-26 04:22:54] ALERT: Possible SSH brute-force attack
+[2026-01-28 12:40:00] ALERT: Possible SSH brute-force attack
 Source IP: 192.168.1.10
-Failed attempts: 11
+Failed Attempts: 11
 Severity: HIGH
 MITRE: T1110 - Brute Force
 --------------------------------
+[2026-01-28 14:45:55] ALERT: Possible web brute-force attack
+Source IP: 192.168.1.50
+Failed Attempts: 5
+Severity: MEDIUM
+MITRE: T1110.003 - Brute Force: Web Application
+----------------------------------------
+
