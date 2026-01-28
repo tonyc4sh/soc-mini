@@ -1,6 +1,0 @@
-[2026-01-26 04:24:24] ALERT: Possible SSH brute-force attack
-Source IP: 192.168.1.10
-Failed Attempts: 11
-Severity: HIGH
-MITRE: T1110 - Brute Force
---------------------------------
