@@ -1,82 +1,103 @@
-# Mini SOC Detection Project
+# SOC Mini Project – Detection & Reporting
 
 ## Project Overview
-This project is a mini SOC-style detection framework focused on identifying brute-force attacks by analyzing system and application logs.
 
-The goal of this repository is to demonstrate core SOC Level 1 skills such as:
+This project is a **mini SOC-style detection and reporting framework** built to simulate how a Security Operations Center detects, enriches, and reports security incidents based on log analysis.
+
+The goal of this project is **not automation at scale**, but to demonstrate **SOC analyst thinking**:
 - log analysis
-- detection logic development
-- threshold-based alerting
+- threat detection logic
+- alert enrichment
 - MITRE ATT&CK mapping
-- structured alert generation
-
-The project is designed as a portfolio project for entry-level SOC / cybersecurity roles.
+- operational reporting
 
 ---
 
-## Implemented Detections
+##  Implemented Detections
 
-### 1. SSH Brute-Force Detection
-**Log source:** `auth.log`
+### SSH Brute Force Detection
+- Analyzes `auth.log`
+- Counts failed SSH login attempts per IP
+- Generates alert when threshold is exceeded
 
-The detection identifies SSH brute-force attacks by:
-- parsing authentication logs
-- counting failed SSH login attempts per source IP
-- triggering an alert when a threshold is exceeded
-
-**Detection details:**
-- Threshold: 10 failed login attempts
-- Severity: HIGH
-- MITRE ATT&CK:
-  - T1110 – Brute Force
-  - Tactic: Credential Access
+**MITRE ATT&CK:**  
+- T1110 – Brute Force  
+**Severity:** HIGH
 
 ---
 
-### 2. Web Application Brute-Force Detection
-**Log source:** `access.log`
+### Web Brute Force Detection
+- Analyzes `access.log`
+- Detects repeated failed login attempts (`POST /login`)
+- Threshold-based detection
 
-This detection identifies brute-force attempts against web login endpoints by:
-- analyzing HTTP access logs
-- detecting repeated failed POST authentication attempts
-- aggregating failures per source IP
-
-**Detection details:**
-- Detection logic:
-  - HTTP method: POST
-  - HTTP status code: 401 (Unauthorized)
-- Threshold: 5 failed login attempts
-- Severity: MEDIUM
-- MITRE ATT&CK:
-  - T1110.003 – Brute Force: Web Application
+**MITRE ATT&CK:**  
+- T1110.003 – Brute Force: Web Application  
+**Severity:** MEDIUM
 
 ---
 
-## Alert Output
-All detections generate structured alerts containing:
+### Suspicious User-Agent Detection
+- Behavioral detection (no thresholds)
+- Uses regex to identify automated tools such as:
+  - sqlmap
+  - nikto
+  - curl
+  - wget
+  - python-requests
+  - missing User-Agent (`"-"`)
+
+**MITRE ATT&CK:**  
+- T1071 – Application Layer Protocol  
+**Severity:** MEDIUM
+
+---
+
+## Alert Enrichment
+
+Each alert includes:
 - timestamp
-- source IP address
-- number of failed attempts
-- severity level
+- detection type
+- source IP
+- severity
 - MITRE ATT&CK technique
+- contextual details (failed attempts / User-Agent)
 
-Alerts are printed to stdout and appended to `alerts.log`.
+Alerts are written to:
+- terminal output
+- `alerts.log`
 
-### Example Alert
-[2026-01-26 04:45:12] ALERT: Possible web brute-force attack
-Source IP: 192.168.1.50
-Failed Attempts: 5
-Severity: MEDIUM
-MITRE: T1110.003 - Brute Force: Web Application
+---
+
+## Reporting
+
+After detections are executed, alerts are parsed and normalized into structured reports.
+
+### JSON Alerts
+`output/alerts.json`
+- unified alert schema
+- ready for SIEM / dashboard ingestion
+
+### Daily Summary Report
+`output/summary_report.txt`
+- total alerts
+- alerts by severity
+- top source IPs
+
+This simulates **SOC daily operational reporting**.
 
 ---
 
 ## How to Run
 
-### Requirements
-- Python 3.14
-
-### SSH Brute-Force Detection
+1. Generate alerts:
 ```bash
 python3 detections/ssh_bruteforce.py
 python3 detections/web_bruteforce.py
+python3 detections/suspicious_user_agent.py
+```
+2. Generate reports:
+```bash
+python3 reporting/generate_report.py
+```
+
