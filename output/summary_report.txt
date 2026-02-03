@@ -1,0 +1,15 @@
+SOC MINI PROJECT – DAILY SUMMARY
+Generated: 2026-02-03 18:17:29.286763
+
+Total alerts: 8
+
+Alerts by severity:
+  HIGH: 1
+  MEDIUM: 7
+
+Top source IPs:
+  192.168.1.10: 1
+  192.168.1.50: 1
+  198.51.100.23: 1
+  198.51.100.24: 1
+  198.51.100.25: 1

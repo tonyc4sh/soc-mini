@@ -1,0 +1,74 @@
+[
+    {
+        "timestamp": "2026-02-03 18:17:14",
+        "description": "Possible SSH brute-force attack",
+        "source_ip": "192.168.1.10",
+        "details": "Failed Attempts: 11",
+        "severity": "HIGH",
+        "mitre": "T1110 - Brute Force",
+        "detection_type": "Possible SSH brute-force attack"
+    },
+    {
+        "timestamp": "2026-02-03 18:17:17",
+        "description": "Possible web brute-force attack",
+        "source_ip": "192.168.1.50",
+        "details": "Failed Attempts: 5",
+        "severity": "MEDIUM",
+        "mitre": "T1110.003 - Brute Force",
+        "detection_type": "Possible web brute-force attack"
+    },
+    {
+        "timestamp": "2026-02-03 18:17:23",
+        "description": "Suspicious User-Agent detected",
+        "source_ip": "198.51.100.23",
+        "details": "User-Agent: sqlmap/1.6",
+        "severity": "MEDIUM",
+        "mitre": "T1071 - Application Layer Protocol",
+        "detection_type": "Suspicious User-Agent detected"
+    },
+    {
+        "timestamp": "2026-02-03 18:17:23",
+        "description": "Suspicious User-Agent detected",
+        "source_ip": "198.51.100.24",
+        "details": "User-Agent: Nikto/2.1.6",
+        "severity": "MEDIUM",
+        "mitre": "T1071 - Application Layer Protocol",
+        "detection_type": "Suspicious User-Agent detected"
+    },
+    {
+        "timestamp": "2026-02-03 18:17:23",
+        "description": "Suspicious User-Agent detected",
+        "source_ip": "198.51.100.25",
+        "details": "User-Agent: curl/7.81.0",
+        "severity": "MEDIUM",
+        "mitre": "T1071 - Application Layer Protocol",
+        "detection_type": "Suspicious User-Agent detected"
+    },
+    {
+        "timestamp": "2026-02-03 18:17:23",
+        "description": "Suspicious User-Agent detected",
+        "source_ip": "198.51.100.26",
+        "details": "User-Agent: Wget/1.21.1",
+        "severity": "MEDIUM",
+        "mitre": "T1071 - Application Layer Protocol",
+        "detection_type": "Suspicious User-Agent detected"
+    },
+    {
+        "timestamp": "2026-02-03 18:17:23",
+        "description": "Suspicious User-Agent detected",
+        "source_ip": "198.51.100.27",
+        "details": "User-Agent: python-requests/2.28.1",
+        "severity": "MEDIUM",
+        "mitre": "T1071 - Application Layer Protocol",
+        "detection_type": "Suspicious User-Agent detected"
+    },
+    {
+        "timestamp": "2026-02-03 18:17:23",
+        "description": "Suspicious User-Agent detected",
+        "source_ip": "198.51.100.28",
+        "details": "User-Agent: -",
+        "severity": "MEDIUM",
+        "mitre": "T1071 - Application Layer Protocol",
+        "detection_type": "Suspicious User-Agent detected"
+    }
+]
